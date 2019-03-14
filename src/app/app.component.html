@@ -3,7 +3,9 @@
         <app-form-task
         (onCreateTask)="createTask($event)"
         ></app-form-task>
-        <app-view-task [tasks]=tasks></app-view-task>
+        <app-view-task 
+        [tasks]=tasks
+        (onDeleteTask)="deleteTask($event)"></app-view-task>
     </div>
     <div class="list-panel">
         <app-form-list

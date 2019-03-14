@@ -53,4 +53,11 @@ export class AppComponent {
       this.tasks = res;
     });
   }
+
+  deleteTask(taskId:number){
+    this.service.deleteTask(taskId)
+    .subscribe(()=>{
+      this.updateTasks();
+    });
+  }
 }
