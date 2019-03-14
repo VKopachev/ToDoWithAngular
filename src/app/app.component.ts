@@ -60,4 +60,11 @@ export class AppComponent {
       this.updateTasks();
     });
   }
+
+  editTextTask(task:any){
+    this.service.editTextTask(task.id, task.text)
+    .subscribe(()=>{
+      this.updateTasks();
+    });
+  }
 }
