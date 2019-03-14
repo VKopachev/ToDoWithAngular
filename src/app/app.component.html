@@ -1,11 +1,13 @@
 <div class="app-main">
     <div class="task-panel">
-        <app-form-task></app-form-task>
-        <app-view-task></app-view-task>
+        <app-form-task
+        (onCreateTask)="createTask($event)"
+        ></app-form-task>
+        <app-view-task [tasks]=tasks></app-view-task>
     </div>
     <div class="list-panel">
         <app-form-list
-        (onCreateList)="onCreateList($event)"
+        (onCreateList)="createList($event)"
         ></app-form-list>
         <app-view-list
         [lists]=lists

@@ -9,12 +9,14 @@ import { ToDoService } from './to-do-service.service';
 export class AppComponent {
   title = 'ToDo';
   lists = [];
+  tasks = [];
   currentList = 1;
 
   constructor(private service: ToDoService) { 
     this.updateLists();
+    this.updateTasks();
   }
-  onCreateList(listName:string){
+  createList(listName:string){
     this.service.createList(listName).subscribe((res:any)=>{
       this.lists.push(res);
       this.currentList = res.id;
@@ -35,5 +37,20 @@ export class AppComponent {
 
   changeCurrentList(listId:number){
     this.currentList = listId;
+    this.updateTasks();
+  }
+
+  createTask(tasktext:string){
+    this.service.createTask(tasktext, this.currentList)
+    .subscribe((res:any)=>{
+      this.tasks.push(res);
+    });
+  }
+
+  updateTasks(){
+    this.service.getTasks(this.currentList)
+    .subscribe((res:any)=>{
+      this.tasks = res;
+    });
   }
 }
