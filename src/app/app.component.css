@@ -1,0 +1,15 @@
+.app-main{
+    display: flex;
+    align-items: stretch;
+    height:100vh;
+}
+
+.task-panel{
+    flex-grow: 5;
+    background-color: burlywood;
+}
+
+.list-panel{
+    flex-grow: 1;
+    background-color: deepskyblue;
+}

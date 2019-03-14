@@ -8,6 +8,7 @@ import { FormTaskComponent } from './form/form-task/form-task.component';
 import { ViewListComponent } from './view/view-list/view-list.component';
 import { ViewTaskComponent } from './view/view-task/view-task.component';
 import { TaskComponent } from './view/task/task.component';
+import { ListComponent } from './view/list/list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TaskComponent } from './view/task/task.component';
     ViewListComponent,
     ViewTaskComponent,
     TaskComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
