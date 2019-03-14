@@ -2,6 +2,7 @@
     <div class="task-panel">
         <app-form-task
         (onCreateTask)="createTask($event)"
+        [disabled]=disabledTaskForm
         ></app-form-task>
         <app-view-task 
         [tasks]=tasks

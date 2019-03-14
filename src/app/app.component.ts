@@ -11,28 +11,52 @@ export class AppComponent {
   lists = [];
   tasks = [];
   currentList = 1;
+  disabledTaskForm = false;
 
   constructor(private service: ToDoService) { 
     this.updateLists();
-    this.updateTasks();
   }
+
+  currentListIsNotEmpty(){
+    return this.lists.length>0;
+  }
+
+  updateDisableTaskForm(){
+    this.disabledTaskForm = !this.currentListIsNotEmpty();
+  }
+
   createList(listName:string){
     this.service.createList(listName).subscribe((res:any)=>{
       this.lists.push(res);
-      this.currentList = res.id;
+      this.changeCurrentList(res.id);
+      this.updateDisableTaskForm();
     });
   }
 
   updateLists(){
     this.service.getLists().subscribe((res:any)=>{
       this.lists = res;
+      this.changeFirstList();
+      this.updateDisableTaskForm();
     });
   }
 
   deleteList(listId:number){
     this.service.deleteList(listId).subscribe(()=>{
       this.updateLists();
+      this.lists.map(list=>{
+        if (list.id == listId){
+          this.lists.splice( this.lists.indexOf(list), 1 );
+        }
+      })
+      this.updateDisableTaskForm();
     });
+  }
+
+  changeFirstList(){
+    if (this.currentListIsNotEmpty()){
+      this.changeCurrentList(this.lists[0].id);
+    }
   }
 
   changeCurrentList(listId:number){
@@ -57,21 +81,21 @@ export class AppComponent {
   deleteTask(taskId:number){
     this.service.deleteTask(taskId)
     .subscribe(()=>{
-      this.updateTasks();
+      this.tasks.map(task=>{
+        if (task.id == taskId){
+          this.tasks.splice( this.tasks.indexOf(task), 1 );
+        }
+      })
     });
   }
 
   editTextTask(task:any){
     this.service.editTextTask(task.id, task.text)
-    .subscribe(()=>{
-      this.updateTasks();
-    });
+    .subscribe();
   }
 
   tickOffTask(task:any){
     this.service.tickOffTask(task.id, task.done)
-    .subscribe(()=>{
-      this.updateTasks();
-    })
+    .subscribe();
   }
 }
