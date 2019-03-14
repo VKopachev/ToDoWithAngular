@@ -4,8 +4,14 @@
         <app-view-task></app-view-task>
     </div>
     <div class="list-panel">
-        <app-form-list></app-form-list>
-        <app-view-list></app-view-list>
+        <app-form-list
+        (onCreateList)="onCreateList($event)"
+        ></app-form-list>
+        <app-view-list
+        [lists]=lists
+        [currentList]=currentList
+        (changeCurrentList)="changeCurrentList($event)"
+        ></app-view-list>
     </div>
 </div>
 <router-outlet></router-outlet>

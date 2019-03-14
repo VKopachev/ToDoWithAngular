@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDoService } from './to-do-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ToDoWithAngular';
+  title = 'ToDo';
+  lists = [];
+  currentList = 1;
+
+  constructor(private service: ToDoService) { 
+    this.updateLists();
+  }
+  onCreateList(listName:string){
+    this.service.createList(listName).subscribe((res:any)=>{
+      this.lists.push(res);
+      this.currentList = res.id;
+    });
+  }
+
+  updateLists(){
+    this.service.getLists().subscribe((res:any)=>{
+      this.lists = res;
+    });
+  }
+
+  changeCurrentList(listId:number){
+    this.currentList = listId;
+  }
 }
