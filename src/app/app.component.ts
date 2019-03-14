@@ -17,12 +17,12 @@ export class AppComponent {
     this.updateLists();
   }
 
-  currentListIsNotEmpty(){
+  listsIsNotEmpty(){
     return this.lists.length>0;
   }
 
   updateDisableTaskForm(){
-    this.disabledTaskForm = !this.currentListIsNotEmpty();
+    this.disabledTaskForm = !this.listsIsNotEmpty();
   }
 
   createList(listName:string){
@@ -49,12 +49,15 @@ export class AppComponent {
           this.lists.splice( this.lists.indexOf(list), 1 );
         }
       })
+      if (!this.listsIsNotEmpty()){
+        this.updateTasks();
+      }
       this.updateDisableTaskForm();
     });
   }
 
   changeFirstList(){
-    if (this.currentListIsNotEmpty()){
+    if (this.listsIsNotEmpty()){
       this.changeCurrentList(this.lists[0].id);
     }
   }

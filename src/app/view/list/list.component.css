@@ -1,0 +1,24 @@
+.list-item, .list-item-selected{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 30px;
+    align-items: center;
+    user-select: none;
+}
+
+.list-item-selected{
+    background-color: dodgerblue;
+}
+
+.list-name{
+    margin-left: 5px;
+}
+
+.list-bth-delete{
+    background-color: rgb(19, 119, 219);
+    border: 0px solid;
+    color: rgb(14, 35, 56);
+    height: 100%;
+}

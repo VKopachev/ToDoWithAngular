@@ -1,0 +1,6 @@
+<div>
+  <input type="text" #formListText
+  (keyup.enter)=onCreate()
+  (keyup.escape)=cleanInputField()>
+  <button (click)=onCreate()>Add</button>
+</div>

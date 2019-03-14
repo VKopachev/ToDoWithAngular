@@ -1,0 +1,8 @@
+<div class="lists" *ngFor="let list of lists">
+  <app-list
+  [list]=list
+  [selected]="isSelect(list.id)"
+  (onSelectList)="changeList($event)"
+  (onDeleteList)="onDeleteList($event)"
+  ></app-list>
+</div>

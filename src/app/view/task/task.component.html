@@ -1,0 +1,21 @@
+<div class="task-item" (dblclick)=switchStateText()>
+  <div>
+    <input 
+    type="checkbox" 
+    class="is-done-task" 
+    [checked]="task.done"
+    (change)="onDone()"
+    >
+    <input *ngIf="isEdit; else elseBlock" #taskTextInput class="task-text-input"
+    type="text" 
+    [value]="task.text" 
+    (keyup.enter)=onChangeText()
+    (blur)=onChangeText()
+    (keyup.escape)=switchStateText()
+    >
+  <ng-template #elseBlock>
+      <span class="task-text">{{task.text}}</span>
+  </ng-template>
+  </div>
+  <button class="delete-task" (click)=onDelete()>Delete</button>
+</div>

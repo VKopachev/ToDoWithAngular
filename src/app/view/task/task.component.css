@@ -1,0 +1,42 @@
+.task-item{
+    background-color: rgb(221, 158, 117);
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.is-done-task{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-text{
+    user-select: none;
+    display: inline;
+}
+
+.task-text, .task-text-input{
+    background-color: rgb(221, 158, 117);
+    color: black;
+    border: 0;
+    font-size: 100%;
+    font-family: Arial;
+    margin-left: 10px;
+    padding: 0;
+    max-width: 90%;
+    width: 90%;
+}
+.task-item div{
+    width: 100%;
+}
+
+.delete-task{
+    background-color: rgb(255, 160, 123);
+    color: rgb(124, 35, 0);
+    border: 0px solid;
+    font: 1.2em sans-serif;
+    float:right;
+    height: 100%;
+}

@@ -1,0 +1,13 @@
+<div [ngClass]="{
+  'list-item-selected':selected, 
+  'list-item':!selected
+}"
+(click)=onSelect()
+>
+  <p class="list-name">{{list.name}}</p>
+  <button 
+  *ngIf="selected" 
+  class="list-bth-delete" 
+  (click)=onDelete()
+  >Delete</button>
+</div>
