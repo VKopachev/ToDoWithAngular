@@ -27,6 +27,12 @@ export class AppComponent {
     });
   }
 
+  deleteList(listId:number){
+    this.service.deleteList(listId).subscribe(()=>{
+      this.updateLists();
+    });
+  }
+
   changeCurrentList(listId:number){
     this.currentList = listId;
   }
