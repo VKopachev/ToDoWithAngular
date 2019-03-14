@@ -67,4 +67,11 @@ export class AppComponent {
       this.updateTasks();
     });
   }
+
+  tickOffTask(task:any){
+    this.service.tickOffTask(task.id, task.done)
+    .subscribe(()=>{
+      this.updateTasks();
+    })
+  }
 }

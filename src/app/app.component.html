@@ -5,6 +5,7 @@
         ></app-form-task>
         <app-view-task 
         [tasks]=tasks
+        (onTickOffTask)="tickOffTask($event)"
         (onEditTextTask)="editTextTask($event)"
         (onDeleteTask)="deleteTask($event)"></app-view-task>
     </div>
