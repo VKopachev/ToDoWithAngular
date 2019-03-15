@@ -14,7 +14,20 @@ export class AppComponent {
   disabledTaskForm = false;
 
   constructor(private service: ToDoService) { 
-    this.updateLists();
+    this.updatePreviewPage();
+  }
+
+  updatePreviewPage(){
+    this.service.getLists().subscribe((res:any)=>{
+      this.lists = res;
+      this.lists.forEach(list=>{
+        this.service.getListPreview(list.id).subscribe((res:any)=>{
+          res.forEach(element => {
+            this.tasks.push(element);
+          });
+        })
+      });
+    });
   }
 
   listsIsNotEmpty(){

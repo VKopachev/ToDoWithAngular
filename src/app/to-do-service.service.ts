@@ -22,6 +22,10 @@ export class ToDoService {
     return this.http.get(this.listUrl);
   }
 
+  getListPreview(listId:number, firstUndone:boolean=true, limit:number=5){
+    return this.http.get(`${this.taskUrl}?listId=${listId}&_limit=${limit}${firstUndone?"&_sort=done&_order=asc":""}`);
+  }
+
   deleteList(listId:number){
     return this.http.delete(this.listUrl+listId)
   }

@@ -1,25 +1,7 @@
 <div class="app-main">
-    <div class="task-panel">
-        <app-form-task
-        (onCreateTask)="createTask($event)"
-        [disabled]=disabledTaskForm
-        ></app-form-task>
-        <app-view-task 
-        [tasks]=tasks
-        (onTickOffTask)="tickOffTask($event)"
-        (onEditTextTask)="editTextTask($event)"
-        (onDeleteTask)="deleteTask($event)"></app-view-task>
-    </div>
-    <div class="list-panel">
-        <app-form-list
-        (onCreateList)="createList($event)"
-        ></app-form-list>
-        <app-view-list
-        [lists]=lists
-        [currentList]=currentList
-        (changeCurrentList)="changeCurrentList($event)"
-        (deleteList)="deleteList($event)"
-        ></app-view-list>
-    </div>
+    <app-home
+    [lists]=lists
+    [tasks]=tasks
+    ></app-home>
 </div>
 <router-outlet></router-outlet>

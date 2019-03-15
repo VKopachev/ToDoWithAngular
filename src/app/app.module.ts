@@ -10,6 +10,8 @@ import { ViewListComponent } from './view/view-list/view-list.component';
 import { ViewTaskComponent } from './view/view-task/view-task.component';
 import { TaskComponent } from './view/task/task.component';
 import { ListComponent } from './view/list/list.component';
+import { HomeComponent } from './pagination/home/home.component';
+import { ListBoxComponent } from './pagination/list-box/list-box.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ListComponent } from './view/list/list.component';
     ViewTaskComponent,
     TaskComponent,
     ListComponent,
+    HomeComponent,
+    ListBoxComponent,
   ],
   imports: [
     BrowserModule,
