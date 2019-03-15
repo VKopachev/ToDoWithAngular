@@ -12,6 +12,13 @@ import { TaskComponent } from './view/task/task.component';
 import { ListComponent } from './view/list/list.component';
 import { HomeComponent } from './pagination/home/home.component';
 import { ListBoxComponent } from './pagination/list-box/list-box.component';
+import { Routes, RouterModule } from '@angular/router';
+import { EditComponent } from './pagination/edit/edit.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: ':id', component: EditComponent },
+];
 
 @NgModule({
   declarations: [
@@ -24,11 +31,13 @@ import { ListBoxComponent } from './pagination/list-box/list-box.component';
     ListComponent,
     HomeComponent,
     ListBoxComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

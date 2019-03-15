@@ -1,5 +1,5 @@
-<div class="list-task" *ngFor="let task of tasks">
-  <app-task 
+<div class="list-task">
+  <app-task *ngFor="let task of tasks"
   [task]=task 
   (onTickOff)="onTickOff($event)"
   (onEditTextTask)="onEditText($event)"

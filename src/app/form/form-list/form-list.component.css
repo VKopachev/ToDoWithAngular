@@ -1,0 +1,16 @@
+button{
+    border: rgba(255, 255, 255, 0.3) solid 1px;
+    border-radius: 0 5px 5px 0;
+    border-left: 0; 
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 34px;
+}
+input[type="text"]{
+    border: rgba(255, 255, 255, 0.3) solid 1px;
+    border-radius: 5px 0 0 5px;
+    border-right: 0; 
+    background-color: rgba(255, 255, 255, 0.3);
+    color: inherit;
+    height: 30px;
+}
