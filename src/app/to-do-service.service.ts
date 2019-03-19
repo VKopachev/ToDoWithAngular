@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ToDoService {
-  baseUrl = "http://localhost:3000/";
+  baseUrl = "http://localhost:8080/";
   listUrl = this.baseUrl + "lists/";
   taskUrl = this.baseUrl + "tasks/";
 
@@ -26,11 +26,11 @@ export class ToDoService {
     return this.http.get(this.listUrl+listId);
   }
 
-  getListPreview(listId:number, firstUndone:boolean=true, limit:number=5){
+  getListPreview(listId: number, firstUndone:boolean=true, limit:number=5){
     return this.http.get(`${this.taskUrl}?listId=${listId}&_limit=${limit}${firstUndone?"&done=false":""}`);//_sort=done&_order=asc
   }
 
-  deleteList(listId:number){
+  deleteList(listId: number){
     return this.http.delete(this.listUrl+listId)
   }
 

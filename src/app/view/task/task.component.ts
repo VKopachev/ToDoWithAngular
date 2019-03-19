@@ -46,7 +46,6 @@ export class TaskComponent implements OnInit {
   
   onEditText(){
     this.switchStateText();
-    console.log("edit text", this.task.text);
     this.onEditTextTask.emit({id:this.task.id, text:this.task.text});
   }
 

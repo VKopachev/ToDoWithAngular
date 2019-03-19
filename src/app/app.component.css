@@ -1,6 +1,7 @@
 .app-main{
     height:100vh;
     widows: 100vw;
+    display: flex;
 }
 
 .task-panel{
@@ -11,5 +12,9 @@
 .list-panel{
     flex-grow: 1;
     background-color: deepskyblue;
+}
+
+.form-item{
+    align-content: center
 }
 

@@ -24,4 +24,9 @@ export class FormTaskComponent implements OnInit {
     }
   }
 
+
+  cleanInputField(){
+    this.inputForm.nativeElement.value = "";
+}
+
 }

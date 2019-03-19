@@ -3,6 +3,7 @@
   #formTaskText 
   id="form-task-text" 
   [disabled]="disabled"
-  (keyup.enter)=onCreate()>
+  (keyup.enter)=onCreate()
+  (keyup.escape)=cleanInputField()>
   <button (click)=onCreate() [disabled]="disabled">Add</button>
 </div>

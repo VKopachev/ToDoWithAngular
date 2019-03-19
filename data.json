@@ -1,202 +1,36 @@
 {
   "lists": [
     {
-      "name": "trsrth",
+      "name": "kufy",
       "id": 1
     },
     {
-      "name": "srhthsrh",
+      "name": "fyukyk",
       "id": 2
     },
     {
-      "name": "Dethtrs",
-      "id": 5
-    },
-    {
-      "name": "gulil",
-      "id": 6
+      "name": "kuykf",
+      "id": 3
     }
   ],
   "tasks": [
     {
-      "text": "srhthrh",
+      "text": "j",
       "done": false,
       "listId": 1,
-      "id": 1
+      "id": 6
     },
     {
-      "text": "tsrh",
+      "text": "jj",
       "done": false,
       "listId": 1,
-      "id": 2
+      "id": 7
     },
     {
-      "text": "srthhth",
+      "text": "td",
       "done": false,
       "listId": 1,
-      "id": 3
-    },
-    {
-      "text": "rhr",
-      "done": false,
-      "listId": 1,
-      "id": 4
-    },
-    {
-      "text": "dtyjdtj",
-      "done": false,
-      "listId": 2,
-      "id": 5
-    },
-    {
-      "text": "dukfy",
-      "done": false,
-      "listId": 2,
-      "id": 11
-    },
-    {
-      "text": "aegrgga",
-      "done": false,
-      "listId": 2,
-      "id": 12
-    },
-    {
-      "text": "srthhrh",
-      "done": false,
-      "listId": 2,
-      "id": 13
-    },
-    {
-      "text": "wgawrrge",
-      "done": false,
-      "listId": 2,
-      "id": 14
-    },
-    {
-      "text": "aergaegaeg",
-      "done": false,
-      "listId": 2,
-      "id": 15
-    },
-    {
-      "text": "aerg",
-      "done": false,
-      "listId": 2,
-      "id": 16
-    },
-    {
-      "text": "aegrgaer",
-      "done": false,
-      "listId": 2,
-      "id": 17
-    },
-    {
-      "text": "shthshrhs",
-      "done": false,
-      "listId": 2,
-      "id": 18
-    },
-    {
-      "text": "kkufkukfk",
-      "done": false,
-      "listId": 2,
-      "id": 19
-    },
-    {
-      "text": "jdtyjtjty",
-      "done": false,
-      "listId": 5,
-      "id": 20
-    },
-    {
-      "text": "dtjyjj",
-      "done": false,
-      "listId": 5,
-      "id": 21
-    },
-    {
-      "text": "jtyjdtjdyjd",
-      "done": false,
-      "listId": 5,
-      "id": 22
-    },
-    {
-      "text": "dtyjyjdtyjdtj",
-      "done": false,
-      "listId": 5,
-      "id": 23
-    },
-    {
-      "text": "dyjdtjdtjyt",
-      "done": false,
-      "listId": 5,
-      "id": 24
-    },
-    {
-      "text": "fkuyykfy",
-      "done": false,
-      "listId": 1,
-      "id": 25
-    },
-    {
-      "text": "fyukyykfykyk",
-      "done": false,
-      "listId": 1,
-      "id": 26
-    },
-    {
-      "text": "strhsrhrr",
-      "done": false,
-      "listId": 1,
-      "id": 27
-    },
-    {
-      "text": "srhthsrh",
-      "done": false,
-      "listId": 1,
-      "id": 28
-    },
-    {
-      "text": "rshthsrhr",
-      "done": false,
-      "listId": 1,
-      "id": 29
-    },
-    {
-      "text": "argegerg",
-      "done": false,
-      "listId": 5,
-      "id": 30
-    },
-    {
-      "text": "aergeg",
-      "done": false,
-      "listId": 5,
-      "id": 31
-    },
-    {
-      "text": "dtyj",
-      "done": false,
-      "listId": 6,
-      "id": 32
-    },
-    {
-      "text": "hsrthr",
-      "done": false,
-      "listId": 6,
-      "id": 33
-    },
-    {
-      "text": "hsr",
-      "done": false,
-      "listId": 6,
-      "id": 34
-    },
-    {
-      "text": "th",
-      "done": false,
-      "listId": 6,
-      "id": 35
+      "id": 8
     }
   ]
 }
