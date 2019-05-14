@@ -17,13 +17,13 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(){
+  onSelect() {
     if (!this.selected){
       this.onSelectList.emit(this.list.id);
     }
   }
 
-  onDelete(){
+  onDelete() {
     this.onDeleteList.emit(this.list.id);
   }
 

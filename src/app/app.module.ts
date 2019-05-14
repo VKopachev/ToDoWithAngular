@@ -14,10 +14,13 @@ import { HomeComponent } from './pagination/home/home.component';
 import { ListBoxComponent } from './pagination/list-box/list-box.component';
 import { Routes, RouterModule } from '@angular/router';
 import { EditComponent } from './pagination/edit/edit.component';
+import { LoginFormComponent } from './form/login-form/login-form.component';
+import { SignUpFormComponent } from './form/sign-up-form/sign-up-form.component';
+import { UserDataFormComponent } from './form/user-data-form/user-data-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: ':id', component: EditComponent },
+  { path: 'list/:id', component: EditComponent }
 ];
 
 @NgModule({
@@ -32,6 +35,9 @@ const appRoutes: Routes = [
     HomeComponent,
     ListBoxComponent,
     EditComponent,
+    LoginFormComponent,
+    SignUpFormComponent,
+    UserDataFormComponent,
   ],
   imports: [
     BrowserModule,

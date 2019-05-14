@@ -19,15 +19,15 @@ export class ViewListComponent implements OnInit {
   ngOnInit() {
 }
 
-  isSelect(listId:number){
+  isSelect(listId: number){
     return this.currentList == listId;
   }
 
-  changeList(listId:number){
+  changeList(listId: number) {
     this.changeCurrentList.emit(listId);
   }
 
-  onDeleteList(listId:number){
+  onDeleteList(listId: number) {
     this.deleteList.emit(listId);
   }
 }

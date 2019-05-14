@@ -14,7 +14,10 @@
     (keyup.escape)=switchStateText()
     >
   <ng-template #elseBlock>
-      <span class="task-text">{{task.text}}</span>
+      <span [ngClass]="{
+  'task-text':!task.done, 
+  'task-selected-text':task.done
+}">{{task.text}}</span>
   </ng-template>
   </div>
   <button class="delete-task" (click)=onDelete()>Delete</button>

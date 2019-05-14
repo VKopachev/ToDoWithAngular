@@ -9,32 +9,32 @@ export class ToDoService {
   listUrl = this.baseUrl + "lists/";
   taskUrl = this.baseUrl + "tasks/";
 
-  constructor(private http: HttpClient) { 
+  constructor(
+    private http: HttpClient
+    ) { 
   }
 
-  createList(listName:string){
-    return this.http.post(this.listUrl, {
-      name: listName
-    });
+  createList(listName: string) {
+    return this.http.post(this.listUrl, {name: listName});
   }
 
-  getLists(){
+  getLists() {
     return this.http.get(this.listUrl);
   }
 
-  getList(listId:number){
+  getList(listId: number) {
     return this.http.get(this.listUrl+listId);
   }
 
-  getListPreview(listId: number, firstUndone:boolean=true, limit:number=5){
+  getListPreview(listId: number, firstUndone: boolean=true, limit: number=5) {
     return this.http.get(`${this.taskUrl}?listId=${listId}&_limit=${limit}${firstUndone?"&done=false":""}`);//_sort=done&_order=asc
   }
 
-  deleteList(listId: number){
+  deleteList(listId: number) {
     return this.http.delete(this.listUrl+listId)
   }
 
-  createTask(taskText:string, listId:number){
+  createTask(taskText: string, listId: number) {
     return this.http.post(this.taskUrl, {
       text:taskText, 
       done:false, 
@@ -42,20 +42,19 @@ export class ToDoService {
     });
   }
 
-  getTasks(listId:number){
+  getTasks(listId: number) {
     return this.http.get(this.taskUrl+"?listId="+listId);
   }
 
-  tickOffTask(taskId:number, taskDone:boolean){
+  tickOffTask(taskId: number, taskDone: boolean) {
     return this.http.patch(this.taskUrl+taskId, {done:taskDone})
   }
 
-  editTextTask(taskId:number, taskText:string){
+  editTextTask(taskId: number, taskText: string) {
     return this.http.patch(this.taskUrl+taskId, {text:taskText})
   }
 
-  deleteTask(taskId:number){
+  deleteTask(taskId: number) {
     return this.http.delete(this.taskUrl+taskId)
   }
-
 }

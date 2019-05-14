@@ -22,7 +22,7 @@ export class TaskComponent implements OnInit {
     this.onTickOff.emit({id:this.task.id, done:this.task.done});
   }
   
-  switchStateText(){
+  switchStateText() {
     this.isEdit = !this.isEdit;
     if (this.isEdit){
       setTimeout(
@@ -34,22 +34,23 @@ export class TaskComponent implements OnInit {
     }
   }
 
-  onChangeText(){
+  onChangeText() {
     let inputField = this.inputText.nativeElement.value;
     if (inputField.length > 0 && this.task.text != inputField){
       this.task.text = inputField;
       this.onEditText();
     } else {
       this.inputText.nativeElement.value = this.task.text;
+      this.switchStateText();
     }
   }
   
-  onEditText(){
+  onEditText() {
     this.switchStateText();
     this.onEditTextTask.emit({id:this.task.id, text:this.task.text});
   }
 
-  onDelete(){
+  onDelete() {
     this.onDeleteTask.emit(this.task.id);
   }
 

@@ -17,7 +17,7 @@
     display: inline;
 }
 
-.task-text, .task-text-input{
+.task-text, .task-text-input, .task-selected-text{
     background-color: rgb(221, 158, 117);
     color: black;
     border: 0;
@@ -28,6 +28,12 @@
     max-width: 90%;
     width: 90%;
 }
+
+.task-selected-text{
+    font-style: oblique;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .task-item div{
     width: 100%;
 }

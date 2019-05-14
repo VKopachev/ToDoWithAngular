@@ -18,15 +18,15 @@ export class ViewTaskComponent implements OnInit {
   ngOnInit() {
   }
 
-  onTickOff(task:any){
+  onTickOff(task: any) {
     this.onTickOffTask.emit(task);
   }
 
-  onEditText(task:any){
+  onEditText(task: any) {
     this.onEditTextTask.emit(task);
   }
 
-  onDelete(taskId:number){
+  onDelete(taskId: number) {
     this.onDeleteTask.emit(taskId);
   }
 
