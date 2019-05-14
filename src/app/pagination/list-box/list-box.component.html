@@ -1,0 +1,10 @@
+<div class="list-box"
+[routerLink]="['/list/', list.id]"
+routerLinkActive="active">
+  <div class="list-title">
+    {{list.name}}
+  </div>
+    <div class="list-tasks">
+      <div class="task-item" *ngFor="let task of tasks">{{task.text}}</div>
+    </div>
+</div>

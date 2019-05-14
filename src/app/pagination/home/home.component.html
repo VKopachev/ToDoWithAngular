@@ -1,0 +1,14 @@
+<div class="page">
+  <app-form-list
+  class="form-item"
+  (onCreateList)="createList($event)"
+  ></app-form-list>
+  <div class="list-preview" >
+    <app-list-box 
+    class="list-box"
+    *ngFor="let list of lists"
+    [list]=list
+    [tasks]="getTasksByList(list.id)"
+    ></app-list-box>
+  </div>
+</div>

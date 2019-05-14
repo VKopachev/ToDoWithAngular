@@ -1,0 +1,33 @@
+<div class="app-main">
+    <div class="task-panel">
+        <div>
+        <button
+        class="bth-home"
+        (click)=toHome()
+        >Home</button>
+        <app-form-task
+        class="form-item"
+        (onCreateTask)="createTask($event)"
+        [disabled]=disabledTaskForm
+        ></app-form-task>
+    </div>
+        <app-view-task 
+        [tasks]=tasks
+        (onTickOffTask)="tickOffTask($event)"
+        (onEditTextTask)="editTextTask($event)"
+        (onDeleteTask)="deleteTask($event)"></app-view-task>
+    </div>
+    
+    <div class="list-panel">
+        <app-form-list
+        class="form-item"
+        (onCreateList)="createList($event)"
+        ></app-form-list>
+        <app-view-list
+        [lists]=lists
+        [currentList]=currentList
+        (changeCurrentList)="changeCurrentList($event)"
+        (deleteList)="deleteList($event)"
+        ></app-view-list>
+    </div>
+</div>
